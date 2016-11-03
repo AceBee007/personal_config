@@ -1,8 +1,8 @@
-set mouse=a"マウスモードをONにする
+set mouse=a "マウスモードをONにする
 set number
 set smartindent
 syntax on
-set fenc=utf-8
+"set fenc=utf-8
 
 set shiftwidth=4
 set softtabstop=4

@@ -1,4 +1,4 @@
-set mouse=a"マウスモードをONにする
+set mouse=a "マウスモードをONにする
 set number
 set smartindent
 syntax on

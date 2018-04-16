@@ -15,3 +15,7 @@ set showmatch " 対になる括弧をハイライト
 set matchtime=1 " 対になる括弧のハイライト時間を1にする
 
 colorscheme ron " デフォルトで入ってるカラースキーム
+
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+

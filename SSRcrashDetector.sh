@@ -9,7 +9,7 @@ do
     done
     # If $deadPID is not NULL (there is a number in deadPID)
     if [ -n "$deadPID" ] ; then
-        # The ssr-server is dead, restart a ssr-serve
+        # The ssr-server is dead, reboot
         eval "sudo reboot -f"
     else
         # Do nothing

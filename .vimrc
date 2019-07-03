@@ -16,6 +16,17 @@ set showmatch " 対になる括弧をハイライト
 set matchtime=1 " 対になる括弧のハイライト時間を1にする
 set colorcolumn=80 " ８０文字縦ライン
 
+" INSERT MODEでのカーソル移動を<Ctrl>押す時にできるようになる
+imap <C-k> <Up>
+imap <C-j> <Down>
+imap <C-h> <Left>
+imap <C-l> <Right>
+imap <C-q> <Esc>
+" normal terminal short cut
+imap <C-e> <C-o>$
+imap <C-a> <C-o>0
+
+
 " vim の矩形選択で文字が無くても右へ進める
 set virtualedit=block
 
@@ -40,6 +51,9 @@ set statusline+=[LOW=%l/%L]
 " ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
 set laststatus=2
 
+" 保管する時に候補一覧表示
+set wildmenu
 
+set nocompatible              " be iMproved, required
 
 

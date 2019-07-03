@@ -26,6 +26,11 @@ imap <C-l> <Right>
 imap <C-e> <C-o>$
 imap <C-a> <C-o>0
 
+" imapでINSERT MODEの() {} "" ''の入力を省力化
+imap (<space> ()<Left>
+imap {<space> {}<Left><CR><Esc><Up>o<Tab>
+imap "<space> ""<Left>
+imap '<space> ''<Left>
 
 " vim の矩形選択で文字が無くても右へ進める
 set virtualedit=block

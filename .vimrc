@@ -21,7 +21,7 @@ imap <C-k> <Up>
 imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
-imap <C-q> <Esc>
+
 " normal terminal short cut
 imap <C-e> <C-o>$
 imap <C-a> <C-o>0

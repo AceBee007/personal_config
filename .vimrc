@@ -25,6 +25,7 @@ imap <C-l> <Right>
 " normal terminal short cut
 imap <C-e> <C-o>$
 imap <C-a> <C-o>0
+imap <C-d> <C-o>x
 
 " imapでINSERT MODEの() {} "" ''の入力を省力化
 imap (<space> ()<Left>

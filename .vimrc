@@ -40,7 +40,7 @@ colorscheme ron " デフォルトで入ってるカラースキーム
 
 set cursorline " 行を強調表示
 highlight CursorLine ctermfg=NONE
-highlight CursorLine ctermbg=240 " カラーコード参照https://jonasjacek.github.io/colors/
+highlight CursorLine cterm=NONE ctermbg=240 " カラーコード参照https://jonasjacek.github.io/colors/
 set cursorcolumn " 列を強調表示
 highlight CursorColumn ctermbg=240
 highlight CursorColumn ctermfg=NONE

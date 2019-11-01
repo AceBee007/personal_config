@@ -37,6 +37,18 @@ set virtualedit=block
 
 colorscheme ron " デフォルトで入ってるカラースキーム
 """" ステータスライン関連
+
+set cursorline " 行を強調表示
+highlight CursorLine ctermfg=NONE
+highlight CursorLine ctermbg=240 " カラーコード参照https://jonasjacek.github.io/colors/
+set cursorcolumn " 列を強調表示
+highlight CursorColumn ctermbg=240
+highlight CursorColumn ctermfg=NONE
+
+" hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
+hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
+
+
 " ファイル名表示
 set statusline=%F
 " 変更チェック表示

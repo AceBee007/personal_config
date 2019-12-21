@@ -2,7 +2,7 @@ sudo -E apt update
 sudo -E apt upgrade -y
 sudo apt autoremove
 
-sudo -E apt install vim tmux -y
+sudo -E apt install vim tmux nethogs htop -y
 
 cd ~
 

@@ -43,15 +43,16 @@ filetype plugin indent on    " ファイル形式別プラグインのロード�
 
 """ start Plugin setting / プラグインの設定は以下に書く
 let g:rainbow_active = 1
+let g:solarized_termcolors=256 " for solarized theme
+set background=dark
+colorscheme solarized8
 """ end plugin setting
 
 set fenc=utf-8 " 文字コードをutf-8
-
 set mouse=a " マウスモードをONにする
 set number " 行番号の表示
 set smartindent " スマートインデント
 syntax on　" 文法ハイライト
-
 set hlsearch " 検索結果ハイライト表示
 nmap <Esc><Esc> :nohlsearch<CR><Esc> " ESC連打でハイライト解除
 set shiftwidth=4 " 以下四行はtab幅を4文字にする
@@ -86,14 +87,13 @@ imap '<space> ''<Left>
 " vim の矩形選択で文字が無くても右へ進める
 set virtualedit=block
 
-colorscheme ron " デフォルトで入ってるカラースキーム
 """" ステータスライン関連
 
 set cursorline " 行を強調表示
 highlight CursorLine ctermfg=NONE
-highlight CursorLine cterm=NONE ctermbg=240 " カラーコード参照https://jonasjacek.github.io/colors/
+highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
 set cursorcolumn " 列を強調表示
-highlight CursorColumn ctermbg=240
+highlight CursorColumn ctermbg=237
 highlight CursorColumn ctermfg=NONE
 
 " hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)

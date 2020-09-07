@@ -1,11 +1,34 @@
 set nocompatible              " be iMproved, required
+"自動にVundleをセットアップする部分
+" START - Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  let iCanHazVundle=0
+endif
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+if iCanHazVundle == 0
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :source $MYVIMRC
+  :PluginInstall
+endif
+" END - Setting up Vundle - the vim plugin bundler
 """ start Vundle setting/ Vundleに必要な設定
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
+"------v-----plugins-----v-------------------------------------
 Plugin 'VundleVim/Vundle.vim'
 " 導入したいプラグインを以下に列挙
 " Plugin '[Github Author]/[Github repo]' の形式で記入
@@ -13,7 +36,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tmhedberg/SimpylFold' " python folding method
 Plugin 'XML-Folding'          " xml/html folding method
 Plugin 'lifepillar/vim-solarized8'
-
+"------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
 """ end Vundle setting

@@ -1,3 +1,27 @@
+""" start Vundle setting/ Vundleに必要な設定
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+" 導入したいプラグインを以下に列挙
+" Plugin '[Github Author]/[Github repo]' の形式で記入
+Plugin 'luochen1990/rainbow'
+Plugin 'tmhedberg/SimpylFold' " python folding method
+Plugin 'XML-Folding'          " xml/html folding method
+Plugin 'lifepillar/vim-solarized8'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+""" end Vundle setting
+
+""" start Plugin setting / プラグインの設定は以下に書く
+let g:rainbow_active = 1
+""" end plugin setting
+
 set fenc=utf-8 " 文字コードをutf-8
 
 set mouse=a " マウスモードをONにする
@@ -71,7 +95,3 @@ set laststatus=2
 
 " 保管する時に候補一覧表示
 set wildmenu
-
-set nocompatible              " be iMproved, required
-
-

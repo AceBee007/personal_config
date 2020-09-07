@@ -6,6 +6,8 @@ sudo -E apt install vim tmux nethogs htop -y
 
 cd ~
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 wget https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.tmux.conf
 
 wget https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.vimrc

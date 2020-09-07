@@ -1,5 +1,5 @@
-""" start Vundle setting/ Vundleに必要な設定
 set nocompatible              " be iMproved, required
+""" start Vundle setting/ Vundleに必要な設定
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -15,7 +15,7 @@ Plugin 'XML-Folding'          " xml/html folding method
 Plugin 'lifepillar/vim-solarized8'
 
 call vundle#end()            " required
-filetype plugin indent on    " required
+filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
 """ end Vundle setting
 
 """ start Plugin setting / プラグインの設定は以下に書く

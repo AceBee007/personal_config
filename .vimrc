@@ -46,10 +46,13 @@ imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
-" normal terminal short cut
+" NORMAL/INSERT MODE terminal short cut ctrl-A, ctrl-E, ctrl-D
 imap <C-e> <C-o>$
+nmap <C-e> $
 imap <C-a> <C-o>0
+nmap <C-a> 0
 imap <C-d> <C-o>x
+nmap <C-d> x
 
 " imapでINSERT MODEの() {} "" ''の入力を省力化
 imap (<space> ()<Left>

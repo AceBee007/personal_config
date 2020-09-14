@@ -48,6 +48,7 @@ set background=dark
 colorscheme solarized8
 """ end plugin setting
 
+""" Start general setting
 set fenc=utf-8 " 文字コードをutf-8
 set mouse=a " マウスモードをONにする
 set number " 行番号の表示
@@ -63,7 +64,39 @@ set backspace=2 " カーソルが先頭にあるとき、前の行の末尾に�
 set showmatch " 対になる括弧をハイライト
 set matchtime=1 " 対になる括弧のハイライト時間を1にする
 set colorcolumn=80 " ８０文字縦ライン
+set virtualedit=block " vim の矩形選択で文字が無くても右へ進める
+"" カーソルライン関連
+set cursorline " 行を強調表示
+highlight CursorLine ctermfg=NONE
+highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
+set cursorcolumn " 列を強調表示
+highlight CursorColumn ctermbg=237
+highlight CursorColumn ctermfg=NONE
+" hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
+hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
+"" ステータスライン関連
+" ファイル名表示
+set statusline=%F
+" 変更チェック表示
+set statusline+=%m
+" 読み込み専用かどうか表示
+set statusline+=%r
+" ヘルプページなら[HELP]と表示
+set statusline+=%h
+" プレビューウインドウなら[Prevew]と表示
+set statusline+=%w
+" これ以降は右寄せ表示
+set statusline+=%=
+" file encoding
+set statusline+=[ENC=%{&fileencoding}]
+" 現在行数/全行数
+set statusline+=[LOW=%l/%L]
+" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
+set laststatus=2
+" 保管する時に候補一覧表示
+set wildmenu
 
+"------v-----KEY-Binding-----v-------------------------------------
 " INSERT MODEでのカーソル移動を<Ctrl>押す時にできるようになる
 imap <C-k> <Up>
 imap <C-j> <Down>
@@ -84,40 +117,12 @@ imap {<space> {}<Left><CR><Esc><Up>o<Tab>
 imap "<space> ""<Left>
 imap '<space> ''<Left>
 
-" vim の矩形選択で文字が無くても右へ進める
-set virtualedit=block
-
-"""" ステータスライン関連
-
-set cursorline " 行を強調表示
-highlight CursorLine ctermfg=NONE
-highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
-set cursorcolumn " 列を強調表示
-highlight CursorColumn ctermbg=237
-highlight CursorColumn ctermfg=NONE
-
-" hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
-hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
+" Ctrl-F to toggle open/close folding / Ctrl-Fで折りたたみの開閉
+nmap <C-f> za
+imap <C-f> <C-o>za
+"------^-----KEY-Binding-----^-------------------------------------
 
 
-" ファイル名表示
-set statusline=%F
-" 変更チェック表示
-set statusline+=%m
-" 読み込み専用かどうか表示
-set statusline+=%r
-" ヘルプページなら[HELP]と表示
-set statusline+=%h
-" プレビューウインドウなら[Prevew]と表示
-set statusline+=%w
-" これ以降は右寄せ表示
-set statusline+=%=
-" file encoding
-set statusline+=[ENC=%{&fileencoding}]
-" 現在行数/全行数
-set statusline+=[LOW=%l/%L]
-" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
-set laststatus=2
 
-" 保管する時に候補一覧表示
-set wildmenu
+
+

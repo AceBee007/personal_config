@@ -46,6 +46,8 @@ let g:rainbow_active = 1
 let g:solarized_termcolors=256 " for solarized theme
 set background=dark
 colorscheme solarized8
+let g:SimpylFold_docstring_preview = 1 " enable python folding with doctrsing preview
+let g:SimpylFold_fold_import = 0 " disable folding import codes
 """ end plugin setting
 
 """ Start general setting

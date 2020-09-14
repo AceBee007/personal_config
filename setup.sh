@@ -8,8 +8,8 @@ cd ~
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-wget https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.tmux.conf
+wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.tmux.conf
 
-wget https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.vimrc
+wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.vimrc
 
-wget https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.bash_aliases
+wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.bash_aliases

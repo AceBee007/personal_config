@@ -2,14 +2,14 @@ sudo -E apt update
 sudo -E apt upgrade -y
 sudo apt autoremove -y
 
-sudo -E apt install vim tmux nethogs htop -y
+sudo -E apt install vim tmux nethogs htop wget -y
 
 cd ~
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.tmux.conf
+curl -skL https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.tmux.conf > ~/.tmux.conf
 
-wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.vimrc
+curl -skL https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.vimrc > ~/.vimrc
 
-wget --no-check-certificate https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.bash_aliases
+curl -skL https://raw.githubusercontent.com/AceBee007/my_vimrc_file/master/.bash_aliases > ~/.bash_aliases

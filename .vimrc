@@ -36,6 +36,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tmhedberg/SimpylFold' " python folding method
 Plugin 'XML-Folding'          " xml/html folding method
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'ervandew/supertab'    " powerful <tab> button
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化

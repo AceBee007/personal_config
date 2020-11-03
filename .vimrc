@@ -122,6 +122,8 @@ imap '<space> ''<Left>
 " Ctrl-F to toggle open/close folding / Ctrl-Fで折りたたみの開閉
 nmap <C-f> za
 imap <C-f> <C-o>za
+" <F2> to fold/unfold all the file/ <F2>ですべての折りたたみを展開/折りたたむ 
+nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
 "------^-----KEY-Binding-----^-------------------------------------
 
 

@@ -128,7 +128,7 @@ imap <C-f> <C-o>za
 " <F2> to fold/unfold all the file/ <F2>ですべての折りたたみを展開/折りたたむ 
 nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
 " <F1> to toggle NERDTree / <F1>でNERDTreeを開く/閉じる、<INSERT/NORMAL>モードで動く
-inoremap <silent> <f1> :NERDTreeToggle<CR>
+inoremap <silent> <f1> <C-o>:NERDTreeToggle<CR>
 nnoremap <silent> <f1> :NERDTreeToggle<CR>
 "------^-----KEY-Binding-----^-------------------------------------
 

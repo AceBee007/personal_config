@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
+
 "自動にVundleをセットアップする部分
-" START - Setting up Vundle - the vim plugin bundler
+" /-/-/- START - Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
@@ -21,10 +22,10 @@ if iCanHazVundle == 0
   :source $MYVIMRC
   :PluginInstall
 endif
-" END - Setting up Vundle - the vim plugin bundler
+" \-\-\- END - Setting up Vundle - the vim plugin bundler
+
 """ start Vundle setting/ Vundleに必要な設定
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,6 +38,7 @@ Plugin 'tmhedberg/SimpylFold' " python folding method
 Plugin 'XML-Folding'          " xml/html folding method
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'ervandew/supertab'    " powerful <tab> button
+Plugin 'preservim/nerdtree'   " For NERDTree file explorer
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
@@ -49,6 +51,7 @@ set background=dark
 colorscheme solarized8
 let g:SimpylFold_docstring_preview = 1 " enable python folding with doctrsing preview
 let g:SimpylFold_fold_import = 0 " disable folding import codes
+let g:NERDTreeShowHidden = 1 " show hidden file in NERDTree
 """ end plugin setting
 
 """ Start general setting
@@ -58,7 +61,6 @@ set number " 行番号の表示
 set smartindent " スマートインデント
 syntax on　" 文法ハイライト
 set hlsearch " 検索結果ハイライト表示
-nmap <Esc><Esc> :nohlsearch<CR><Esc> " ESC連打でハイライト解除
 set shiftwidth=4 " 以下四行はtab幅を4文字にする
 set softtabstop=4
 set tabstop=4
@@ -100,6 +102,8 @@ set laststatus=2
 set wildmenu
 
 "------v-----KEY-Binding-----v-------------------------------------
+" imap/nmapはただのコマンド置換、再帰的に置換される　imap a aaは無限に実行される
+" nnoremap/inoremapは再帰的に置換を行わない、
 " INSERT MODEでのカーソル移動を<Ctrl>押す時にできるようになる
 imap <C-k> <Up>
 imap <C-j> <Down>
@@ -120,14 +124,25 @@ imap {<space> {}<Left><CR><Esc><Up>o<Tab>
 imap "<space> ""<Left>
 imap '<space> ''<Left>
 
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc> 
+
 " Ctrl-F to toggle open/close folding / Ctrl-Fで折りたたみの開閉
 nmap <C-f> za
 imap <C-f> <C-o>za
 " <F2> to fold/unfold all the file/ <F2>ですべての折りたたみを展開/折りたたむ 
 nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
+" <F1> to toggle NERDTree / <F1>でNERDTreeを開く/閉じる、<INSERT/NORMAL>モードで動く
+inoremap <silent> <f1> :NERDTreeToogle<CR>
+nnoremap <silent> <f1> :NERDTreeToogle<CR>
 "------^-----KEY-Binding-----^-------------------------------------
 
+"------v-----auto-command-----v-------------------------------------
+" ファイル名指定せずにvimに入ると、直接NERDTreeを開く
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
+" NERDTree + fileの状態でfileを閉じると、NERDTreeも一緒に閉じる(vimが閉じる)
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-
-
+"------^-----auto-command-----^-------------------------------------
 

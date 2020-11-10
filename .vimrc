@@ -39,6 +39,7 @@ Plugin 'XML-Folding'          " xml/html folding method
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'ervandew/supertab'    " powerful <tab> button
 Plugin 'preservim/nerdtree'   " For NERDTree file explorer
+Plugin 'jiangmiao/auto-pairs' " auto complete pairs
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
@@ -117,12 +118,6 @@ imap <C-a> <C-o>0
 nmap <C-a> 0
 imap <C-d> <C-o>x
 nmap <C-d> x
-
-" imapでINSERT MODEの() {} "" ''の入力を省力化
-imap (<space> ()<Left>
-imap {<space> {}<Left><CR><Esc><Up>o<Tab>
-imap "<space> ""<Left>
-imap '<space> ''<Left>
 
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc> 

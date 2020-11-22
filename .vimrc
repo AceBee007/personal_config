@@ -120,7 +120,7 @@ imap <C-d> <C-o>x
 nmap <C-d> x
 
 " ESC連打でハイライト解除
-nmap <Esc><Esc> :nohlsearch<CR><Esc> 
+nnoremap <Esc><Esc> :nohlsearch<CR> 
 
 " Ctrl-F to toggle open/close folding / Ctrl-Fで折りたたみの開閉
 nmap <C-f> za

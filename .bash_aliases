@@ -1,5 +1,5 @@
 alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
-alias apt-update="sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove"
+alias apt-update="sudo -E apt-get update && sudo -E apt-get upgrade && sudo -E apt-get dist-upgrade && sudo apt-get autoremove"
 
 # colored ls command
 alias ls='ls -ahFG'

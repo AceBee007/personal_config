@@ -2,7 +2,7 @@ alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 alias apt-update="sudo -E apt-get update && sudo -E apt-get upgrade && sudo -E apt-get dist-upgrade && sudo apt-get autoremove"
 
 # colored ls command
-alias ls='ls -ahFG'
+alias ls='ls -ahFG --color=auto'
 
 # for monitoring GPU status
 alias nvidiawatch='watch -n0.5 "nvidia-smi"'

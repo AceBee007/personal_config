@@ -111,13 +111,18 @@ imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
-" NORMAL/INSERT MODE terminal short cut ctrl-A, ctrl-E, ctrl-D
+" NORMAL/INSERT MODE terminal shortcut ctrl-A, ctrl-E, ctrl-D
 imap <C-e> <C-o>$
 nmap <C-e> $
 imap <C-a> <C-o>0
 nmap <C-a> 0
 imap <C-d> <C-o>x
 nmap <C-d> x
+
+" COMMAND MODE to support ctrl-A, ctrl-E, ctrl-D
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-d> <Del>
 
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR> 

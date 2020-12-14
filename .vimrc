@@ -34,12 +34,13 @@ Plugin 'VundleVim/Vundle.vim'
 " 導入したいプラグインを以下に列挙
 " Plugin '[Github Author]/[Github repo]' の形式で記入
 Plugin 'luochen1990/rainbow'
-Plugin 'tmhedberg/SimpylFold' " python folding method
-Plugin 'XML-Folding'          " xml/html folding method
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'ervandew/supertab'    " powerful <tab> button
-Plugin 'preservim/nerdtree'   " For NERDTree file explorer
-Plugin 'jiangmiao/auto-pairs' " auto complete pairs
+Plugin 'tmhedberg/SimpylFold'         " python folding method
+Plugin 'XML-Folding'                  " xml/html folding method
+Plugin 'lifepillar/vim-solarized8'    " for theme
+Plugin 'ervandew/supertab'            " powerful <tab> button
+Plugin 'preservim/nerdtree'           " For NERDTree file explorer
+Plugin 'jiangmiao/auto-pairs'         " auto complete pairs
+Plugin 'easymotion/vim-easymotion'    "for easy move
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
@@ -103,6 +104,22 @@ set laststatus=2
 set wildmenu
 
 "------v-----KEY-Binding-----v-------------------------------------
+
+" set <Space> to <Leader>
+let mapleader = "\<Space>"
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+" <Leader>s{char}{char} to move to {char}{char}
+map <Leader>s <Plug>(easymotion-overwin-f2)
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " imap/nmapはただのコマンド置換、再帰的に置換される　imap a aaは無限に実行される
 " nnoremap/inoremapは再帰的に置換を行わない、
 " INSERT MODEでのカーソル移動を<Ctrl>押す時にできるようになる

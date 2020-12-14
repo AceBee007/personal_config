@@ -112,12 +112,12 @@ imap <C-h> <Left>
 imap <C-l> <Right>
 
 " NORMAL/INSERT MODE terminal shortcut ctrl-A, ctrl-E, ctrl-D
-imap <C-e> <C-o>$
-nmap <C-e> $
-imap <C-a> <C-o>0
-nmap <C-a> 0
-imap <C-d> <C-o>x
-nmap <C-d> x
+inoremap <C-e> <End>
+nnoremap <C-e> <End>
+inoremap <C-a> <Home>
+nnoremap <C-a> <Home>
+inoremap <C-d> <Del>
+nnoremap <C-d> <Del>
 
 " COMMAND MODE to support ctrl-A, ctrl-E, ctrl-D
 cnoremap <C-a> <Home>

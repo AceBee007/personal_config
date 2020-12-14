@@ -124,6 +124,10 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 
+" Do Not over write register when use x/s to delete
+nnoremap x "_x
+nnoremap s "_s
+
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR> 
 

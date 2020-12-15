@@ -102,6 +102,7 @@ set statusline+=[LOW=%l/%L]
 set laststatus=2
 " 保管する時に候補一覧表示
 set wildmenu
+set path+=**                     " Provide tab-compiletion for all file related
 
 "------v-----KEY-Binding-----v-------------------------------------
 

@@ -128,6 +128,10 @@ imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
+" use K/J to move fast (half screen up or down
+nnoremap K <C-u>zz
+nnoremap J <C-d>zz
+
 " NORMAL/INSERT MODE terminal shortcut ctrl-A, ctrl-E, ctrl-D
 inoremap <C-e> <End>
 nnoremap <C-e> <End>

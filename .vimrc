@@ -132,6 +132,14 @@ imap <C-l> <Right>
 nnoremap K <C-u>zz
 nnoremap J <C-d>zz
 
+" mapping search result going to middle of screen
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap # #zz
+nnoremap * *zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
 " NORMAL/INSERT MODE terminal shortcut ctrl-A, ctrl-E, ctrl-D
 inoremap <C-e> <End>
 nnoremap <C-e> <End>

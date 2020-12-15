@@ -40,7 +40,9 @@ Plugin 'lifepillar/vim-solarized8'    " for theme
 Plugin 'ervandew/supertab'            " powerful <tab> button
 Plugin 'preservim/nerdtree'           " For NERDTree file explorer
 Plugin 'jiangmiao/auto-pairs'         " auto complete pairs
-Plugin 'easymotion/vim-easymotion'    "for easy move
+Plugin 'easymotion/vim-easymotion'    " for easy move
+Plugin 'airblade/vim-gitgutter'       " for git operation
+Plugin 'tpope/vim-fugitive'           " for git operation
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化
@@ -120,6 +122,21 @@ nmap <Leader>l <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" some <Leader> key bind for git operation
+nnoremap <leader>gs :tab sp<CR>:Gstatus<CR>:only<CR>
+nnoremap <leader>ga :Gwrite<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gl :Git log<CR>
+nnoremap <leader>gh :tab sp<CR>:0Glog<CR>
+" abbrev for `git history`: create new quickfix tab for history
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gf :Gfetch<CR>
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap <leader>gr :Grebase -i<CR>
+nnoremap <leader>gg :Ggrep 
+nnoremap <leader>gm :Gmerge 
 
 " imap/nmapはただのコマンド置換、再帰的に置換される　imap a aaは無限に実行される
 " nnoremap/inoremapは再帰的に置換を行わない、

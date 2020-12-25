@@ -2,7 +2,7 @@ sudo -E apt update
 sudo -E apt upgrade -y
 sudo apt autoremove -y
 
-sudo -E apt install vim tmux nethogs htop wget git -y
+sudo -E apt install vim tmux nethogs htop wget git build-essential openssh-server net-tools -y
 
 cd ~
 

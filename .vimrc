@@ -138,6 +138,15 @@ nnoremap <leader>gr :Grebase -i<CR>
 nnoremap <leader>gg :Ggrep 
 nnoremap <leader>gm :Gmerge 
 
+" <Leader>Tで各機能のトグルの切り替え
+nnoremap <Plug>(my-switch) <Nop>
+nmap <Leader>t <Plug>(my-switch)
+nnoremap <silent> <Plug>(my-switch)s :<C-u>setl spell! spell?<CR>
+nnoremap <silent> <Plug>(my-switch)l :<C-u>setl list! list?<CR>
+nnoremap <silent> <Plug>(my-switch)t :<C-u>setl expandtab! expandtab?<CR>
+nnoremap <silent> <Plug>(my-switch)w :<C-u>setl wrap! wrap?<CR>
+nnoremap <silent> <Plug>(my-switch)p :<C-u>setl paste! paste?<CR>
+
 " imap/nmapはただのコマンド置換、再帰的に置換される　imap a aaは無限に実行される
 " nnoremap/inoremapは再帰的に置換を行わない、
 " INSERT MODEでのカーソル移動を<Ctrl>押す時にできるようになる

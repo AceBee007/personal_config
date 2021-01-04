@@ -6,7 +6,7 @@ to save my .vimrc, .tmux.conf files online
 run below
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/AceBee007/personal_config/master/setup.sh)
+bash <(curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/setup.sh)
 ```
 
 or run below separately
@@ -17,4 +17,14 @@ curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.tm
 curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.vimrc > ~/.vimrc
 
 curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.bash_aliases > ~/.bash_aliases
+```
+
+
+## install docker and docker-compose
+
+run below
+
+```bash
+bash <(curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/install_docker.sh)
+bash <(curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/install_docker-compose.sh)
 ```

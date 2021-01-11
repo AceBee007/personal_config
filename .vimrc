@@ -153,6 +153,7 @@ nnoremap <silent> <Plug>(my-switch)p :<C-u>setl paste! paste?<CR>
 imap <C-k> <Up>
 imap <C-j> <Down>
 imap <C-h> <Left>
+imap <C-b> <Left>
 imap <C-l> <Right>
 
 " use K/J to move fast (half screen up or down

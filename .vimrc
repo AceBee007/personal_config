@@ -74,6 +74,9 @@ set showmatch " 対になる括弧をハイライト
 set matchtime=1 " 対になる括弧のハイライト時間を1にする
 set colorcolumn=80 " ８０文字縦ライン
 set virtualedit=block " vim の矩形選択で文字が無くても右へ進める
+set ignorecase " 大文字・小文字の区別なく検索する
+set smartcase " 検索文字列に大文字が含まれたら、区別して検索
+set wrapscan " 検索時に最後まで行ったら最初に戻る
 "" カーソルライン関連
 set cursorline " 行を強調表示
 highlight CursorLine ctermfg=NONE

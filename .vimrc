@@ -52,7 +52,7 @@ filetype plugin indent on    " ファイル形式別プラグインのロード�
 let g:rainbow_active = 1
 let g:solarized_termcolors=256 " for solarized theme
 set background=dark
-colorscheme solarized8
+colorscheme solarized8_flat
 let g:SimpylFold_docstring_preview = 1 " enable python folding with doctrsing preview
 let g:SimpylFold_fold_import = 0 " disable folding import codes
 let g:NERDTreeShowHidden = 1 " show hidden file in NERDTree
@@ -85,7 +85,7 @@ set cursorline " 行を強調表示
 highlight CursorLine ctermfg=NONE
 highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
 set cursorcolumn " 列を強調表示
-highlight CursorColumn ctermbg=237
+highlight CursorColumn ctermbg=236
 highlight CursorColumn ctermfg=NONE
 " hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
 hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
@@ -210,6 +210,24 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
 " NERDTree + fileの状態でfileを閉じると、NERDTreeも一緒に閉じる(vimが閉じる)
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" INSERT/NORMALモード移行する時のcolorschemeを変更
+set ttimeoutlen=0 " タイムアウトの時間を0に
+augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:ToggleColorscheme('Enter') "挿入モード時の色
+    autocmd InsertLeave * call s:ToggleColorscheme('Leave') "通常モード時の色
+augroup END
 
+function! s:ToggleColorscheme(mode)
+  if a:mode == 'Enter'
+    colorscheme solarized8
+    highlight CursorLine cterm=NONE ctermbg=237 " カラーコード参照https://jonasjacek.github.io/colors/
+    highlight CursorColumn ctermbg=237
+  else
+    colorscheme solarized8_flat
+    highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
+    highlight CursorColumn ctermbg=236
+  endif
+endfunction
 "------^-----auto-command-----^-------------------------------------
 

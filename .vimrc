@@ -81,12 +81,10 @@ set ignorecase " 大文字・小文字の区別なく検索する
 set smartcase " 検索文字列に大文字が含まれたら、区別して検索
 set wrapscan " 検索時に最後まで行ったら最初に戻る
 "" カーソルライン関連
-set cursorline " 行を強調表示
-highlight CursorLine ctermfg=NONE
-highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
+set cursorline " 行を強調表示 ctermfgは文字の色、ctermは文字のフォント(NORMALかBOLD)、ctermbgは背景色
+highlight CursorLine ctermfg=NONE cterm=underline ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
 set cursorcolumn " 列を強調表示
-highlight CursorColumn ctermbg=236
-highlight CursorColumn ctermfg=NONE
+highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=236
 " hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
 hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
 "" ステータスライン関連
@@ -220,13 +218,11 @@ augroup END
 
 function! s:ToggleColorscheme(mode)
   if a:mode == 'Enter'
-    colorscheme solarized8
-    highlight CursorLine cterm=NONE ctermbg=237 " カラーコード参照https://jonasjacek.github.io/colors/
-    highlight CursorColumn ctermbg=237
+    highlight CursorLine ctermfg=NONE cterm=NONE ctermbg=237 " カラーコード参照https://jonasjacek.github.io/colors/
+    highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=237
   else
-    colorscheme solarized8_flat
-    highlight CursorLine cterm=NONE ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
-    highlight CursorColumn ctermbg=236
+    highlight CursorLine ctermfg=NONE cterm=underline ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
+    highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=236
   endif
 endfunction
 "------^-----auto-command-----^-------------------------------------

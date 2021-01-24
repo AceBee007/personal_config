@@ -87,6 +87,7 @@ set cursorcolumn " 列を強調表示
 highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=236
 " hi clear CursorLine " 所在行番号だけをハイライト(必ずcolorschemeの後に設定)
 hi CursorLineNr term=bold cterm=NONE ctermfg=232 ctermbg=255 " 行番号の設定
+highlight StatusLine term=NONE cterm=NONE ctermfg=239 ctermbg=250 " set Statusline LightGray
 "" ステータスライン関連
 " ファイル名表示
 set statusline=%F
@@ -220,9 +221,11 @@ function! s:ToggleColorscheme(mode)
   if a:mode == 'Enter'
     highlight CursorLine ctermfg=NONE cterm=NONE ctermbg=237 " カラーコード参照https://jonasjacek.github.io/colors/
     highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=237
+    highlight StatusLine term=NONE cterm=NONE ctermfg=Black ctermbg=194 " set StatusLine LightGreen
   else
     highlight CursorLine ctermfg=NONE cterm=underline ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
     highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=236
+    highlight StatusLine term=NONE cterm=NONE ctermfg=239 ctermbg=250 " set Statusline LightGray
   endif
 endfunction
 "------^-----auto-command-----^-------------------------------------

@@ -221,7 +221,7 @@ function! s:ToggleColorscheme(mode)
   if a:mode == 'Enter'
     highlight CursorLine ctermfg=NONE cterm=NONE ctermbg=237 " カラーコード参照https://jonasjacek.github.io/colors/
     highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=237
-    highlight StatusLine term=NONE cterm=NONE ctermfg=Black ctermbg=194 " set StatusLine LightGreen
+    highlight StatusLine term=NONE cterm=NONE ctermfg=Black ctermbg=152 " set StatusLine LightCyan3
   else
     highlight CursorLine ctermfg=NONE cterm=underline ctermbg=236 " カラーコード参照https://jonasjacek.github.io/colors/
     highlight CursorColumn ctermfg=NONE cterm=NONE ctermbg=236

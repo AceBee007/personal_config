@@ -64,7 +64,7 @@ set fileencoding=utf-8 " ファイル書き込み時の文字コードをutf-8�
 set fileencodings=utf-8,cp932,sjis,ucs-bom,gb18030,gbk,gb2312,cp936 " ファイル読み取り時の文字コードを順番に試みる
 set fileformats=unix,dos,mac " ファイルの保存形式を順番に試みる
 set mouse=a " マウスモードをONにする
-set number " 行番号の表示
+set number relativenumber " 行番号の表示
 set smartindent " スマートインデント
 syntax on　" 文法ハイライト
 set hlsearch " 検索結果ハイライト表示

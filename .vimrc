@@ -43,6 +43,7 @@ Plugin 'jiangmiao/auto-pairs'         " auto complete pairs
 Plugin 'easymotion/vim-easymotion'    " for easy move
 Plugin 'airblade/vim-gitgutter'       " for git operation
 Plugin 'tpope/vim-fugitive'           " for git operation
+Plugin 'lepture/vim-velocity'         " for velocity template filetype *.vm syntax highlight
 "------^-----plugins-----^-------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " ファイル形式別プラグインのロードを有効化

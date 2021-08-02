@@ -210,6 +210,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
 " NERDTree + fileの状態でfileを閉じると、NERDTreeも一緒に閉じる(vimが閉じる)
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" auto command to set *.conf 's filetype to dosini (a similar syntax but with highlight)
+autocmd BufRead,BufNewFile *.conf setf dosini
 " INSERT/NORMALモード移行する時のcolorschemeを変更
 set ttimeoutlen=0 " タイムアウトの時間を0に
 augroup InsertHook

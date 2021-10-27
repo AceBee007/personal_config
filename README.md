@@ -6,7 +6,7 @@ to save my .vimrc, .tmux.conf files online
 run below
 
 ```bash
-bash <(curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/setup.sh)
+bash <(curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/setup_ubuntu.sh)
 ```
 
 or run below separately

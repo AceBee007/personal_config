@@ -194,6 +194,10 @@ nnoremap s "_s
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR> 
 
+" VisualModeで>と<でインデントずらしても、選択範囲が消えない
+vnoremap < <gv
+vnoremap > >gv
+
 " Ctrl-F to toggle open/close folding / Ctrl-Fで折りたたみの開閉
 nmap <C-f> za
 imap <C-f> <C-o>za

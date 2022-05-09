@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 
-"TO SETUP Vundle automaticly
+"TO SETUP Vundle automatically
 " /-/-/- START - Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')

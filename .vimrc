@@ -66,7 +66,7 @@ set fileencoding=utf-8                   " set default file reading char-code to
 set fileencodings=utf-8,cp932,sjis,euc-jp,ucs-bom,gb18030,gbk,gb2312,cp936
 set fileformats=unix,dos,mac             " try to fit the file saving format
 set mouse=a                              " turn on the MOUSE MODE
-set number relativenumber                " set relative line number / vim 7.3+
+set number relativenumber                " set relative line number / relativenumber need vim 7.3+
 set smartindent
 syntax on                                " set syntax highlight
 set hlsearch                             " highlight search result
@@ -78,7 +78,7 @@ set expandtab
 set backspace=2                          " jump to previous lines end when backspace the first char of the line
 set showmatch                            " highlight the matched brackets when cursor is on
 set matchtime=1                          " always highlight the matched brackets
-set colorcolumn=80                       " 80 chars column highlight
+set colorcolumn=80                       " 80 chars column highlight, need vim 8.0+
 set virtualedit=block                    " allow VISUAL MODE to select char which is not exist
 set ignorecase                           " Ignore the case when search
 set smartcase                            " If the keyword contains a CAPITAL LETTER, don't ignore case
@@ -142,7 +142,7 @@ map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 """ }
 
-""" Plugin gitgutter {
+""" Plugin - gitgutter {
 " some <Leader> key bind for git operation
 nnoremap <leader>gs :tab sp<CR>:Gstatus<CR>:only<CR>
 nnoremap <leader>ga :Gwrite<CR>
@@ -157,6 +157,12 @@ nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>gr :Grebase -i<CR>
 nnoremap <leader>gg :Ggrep 
 nnoremap <leader>gm :Gmerge
+""" }
+
+""" Plugin - NERDTree {
+" <F1> to toggle NERDTree (works in NORMAL/INSERT mode)
+inoremap <silent> <f1> <C-o>:NERDTreeToggle<CR>
+nnoremap <silent> <f1> :NERDTreeToggle<CR>
 """ }
 
 " <Leader>T to toggle on/off some functionality
@@ -218,9 +224,7 @@ nmap <C-f> za
 imap <C-f> <C-o>za
 " <F2> to fold/unfold all the file 
 nnoremap <expr> <f2> &foldlevel ? 'zM' :'zR'
-" <F1> to toggle NERDTree (works in NORMAL/INSERT mode)
-inoremap <silent> <f1> <C-o>:NERDTreeToggle<CR>
-nnoremap <silent> <f1> :NERDTreeToggle<CR>
+
 "------^-----KEY-Binding-----^-------------------------------------
 
 "------v-----auto-command-----v-------------------------------------

@@ -116,3 +116,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# ls after cd
+function cd {
+    builtin cd "$@" && ls -aFG
+}
+
+

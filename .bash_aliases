@@ -18,3 +18,5 @@ alias dockerrmiall="docker rmi `docker image ls | grep none | awk '{print $3}'`"
 function cd {
     builtin cd "$@" && ls -aFG
 }
+
+

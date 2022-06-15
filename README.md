@@ -17,6 +17,8 @@ curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.tm
 curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.vimrc > ~/.vimrc
 
 curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.bash_aliases > ~/.bash_aliases
+
+curl -skL https://raw.githubusercontent.com/AceBee007/personal_config/master/.gitconfig > ~/.gitconfig
 ```
 
 

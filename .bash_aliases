@@ -9,9 +9,9 @@ alias nvidiawatch='watch -n0.5 "nvidia-smi"'
 
 # Docker aliases
 # remove all the exited image
-alias dockerrmall='docker rm $(docker ps -a --filter 'status=exited' -q)'
+alias dockerrmall="docker rm $(docker ps -a --filter 'status=exited' -q)"
 # remove all the image with none tag
-alias dockerrmiall='docker rmi `docker image ls | grep none | awk '{print $3}'`'
+alias dockerrmiall="docker rmi `docker image ls | grep none | awk '{print $3}'`"
 
 
 # ls after cd

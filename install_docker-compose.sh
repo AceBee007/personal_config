@@ -1,7 +1,7 @@
 sudo true
 os=`uname -s`
 arch=`uname -m`
-if [ $arch='aarch64' ]; then
+if [ ${arch} = 'aarch64' ]; then
     echo Can not found aarch64 in official github releases.
     read -p "Install docker-compose from apt? (y/N): " yn
     case "$yn" in [yY]*) ;; *) echo "abort." ; exit ;; esac
